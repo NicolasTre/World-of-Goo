@@ -1,0 +1,31 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Events;
+
+public class SC_Tracing : MonoBehaviour
+{
+    private GameObject Target;
+    [SerializeField] GameObject LINE;
+    GameObject _line;
+
+    private void Awake()
+    {
+        LinkView();
+    }
+    public void LinkView()
+    {
+        // chaque UsedBlob dans un radius de 5
+        var overlapped = Physics2D.OverlapCircleAll(transform.position, 5.2f, LayerMask.GetMask("UsedBlob"));
+        if (overlapped.Length > 1)
+        {
+            foreach (var overlap in overlapped)
+            {
+                _line = Instantiate(LINE, transform.position, Quaternion.identity, transform);
+                _line.gameObject.GetComponentInChildren<BoxCollider2D>().isTrigger = false;
+                Target = overlap.gameObject;
+                _line.GetComponent<SC_TraceUpdate>().Target = Target.transform;
+            }
+        }
+    }
+}
