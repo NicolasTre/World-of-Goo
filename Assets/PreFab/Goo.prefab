@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6638188306127922672}
   - component: {fileID: 5018411066828013429}
-  - component: {fileID: 5555807348152297422}
   - component: {fileID: 4291029820906011979}
+  - component: {fileID: 5555807348152297422}
   - component: {fileID: 3668446434009124895}
   m_Layer: 6
   m_Name: Goo
@@ -91,6 +91,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4291029820906011979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1615152066776829768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6157830a0c9e2b47b5bb6e8b0aad52a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LINE: {fileID: 1899291389879289808, guid: bfb43c8c2618d7a41b756b75760d4577, type: 3}
+  UsedBlob: {fileID: 3974897944807531903, guid: bacded75a892a874c81b8f874f909167, type: 3}
+  Connect: []
 --- !u!58 &5555807348152297422
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -126,22 +141,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &4291029820906011979
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1615152066776829768}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6157830a0c9e2b47b5bb6e8b0aad52a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LINE: {fileID: 1899291389879289808, guid: bfb43c8c2618d7a41b756b75760d4577, type: 3}
-  UsedBlob: {fileID: 3974897944807531903, guid: bacded75a892a874c81b8f874f909167, type: 3}
-  Connect:
-  - {fileID: 1615152066776829768}
 --- !u!50 &3668446434009124895
 Rigidbody2D:
   serializedVersion: 4

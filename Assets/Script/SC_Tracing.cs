@@ -15,8 +15,8 @@ public class SC_Tracing : MonoBehaviour
     }
     public void LinkView()
     {
-        // chaque UsedBlob dans un radius de 5
-        var overlapped = Physics2D.OverlapCircleAll(transform.position, 5.2f, LayerMask.GetMask("UsedBlob"));
+        // chaque UsedBlob dans un radius de 2
+        var overlapped = Physics2D.OverlapCircleAll(transform.position, 3f, LayerMask.GetMask("UsedBlob"));
         if (overlapped.Length > 1)
         {
             foreach (var overlap in overlapped)

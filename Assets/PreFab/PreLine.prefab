@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5662234861098037630}
   - component: {fileID: 9144918350604833854}
   m_Layer: 0
-  m_Name: TraceUpdate
+  m_Name: PreLine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 1899291389879289808}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.8695173, y: -2.6492076, z: 0.03566544}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Target: {fileID: 0}
-  moveBlob: {fileID: 4291029820906011979, guid: 08f83b5841ab0f24ebae8f42ebc7ec42, type: 3}
+  moveBlob: {fileID: 0}
 --- !u!1 &3969202637112025563
 GameObject:
   m_ObjectHideFlags: 0
@@ -74,7 +74,7 @@ Transform:
   m_GameObject: {fileID: 3969202637112025563}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.03566544}
+  m_LocalPosition: {x: 0.5, y: 0, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

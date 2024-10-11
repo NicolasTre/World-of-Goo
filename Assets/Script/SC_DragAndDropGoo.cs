@@ -20,19 +20,18 @@ public class SC_DragAndDropGoo : MonoBehaviour
 
     private void Update()
     {
-        overlappedP = Physics2D.OverlapCircleAll(transform.position, 5, LayerMask.GetMask("UsedBlob"));
         if (IsGrabed)
         {
-            // chaque UsedBlob dans un radius de 5
-            overlappedP = Physics2D.OverlapCircleAll(transform.position, 5, LayerMask.GetMask("UsedBlob"));
-            if (overlappedP.Length > 1)
+            // chaque UsedBlob dans un radius de 3
+            overlappedP = Physics2D.OverlapCircleAll(transform.position, 3f, LayerMask.GetMask("UsedBlob"));
+            if (overlappedP.Length >= 2)
             {
                 foreach (var overlap in overlappedP)
                 {
                     if (!Connect.Contains(overlap.gameObject))
                     {
                         Connect.Add(overlap.gameObject);
-                        if (transform.childCount < overlappedP.Length)
+                        if (transform.childCount < overlappedP.Length && overlappedP.Length > 1)
                         {
                             _line = Instantiate(LINE, transform.position, Quaternion.identity, transform);
                             Target = overlap.gameObject;
@@ -44,7 +43,7 @@ public class SC_DragAndDropGoo : MonoBehaviour
 
             if (Connect != null)
             {
-                Connect.RemoveAll(x => Vector2.Distance(transform.position, x.transform.position) > 5);
+                Connect.RemoveAll(x => Vector2.Distance(transform.position, x.transform.position) > 3f);
             }
         }
     }
@@ -82,9 +81,9 @@ public class SC_DragAndDropGoo : MonoBehaviour
 
     private void Link()
     {
-        // chaque UsedBlob dans un radius de 5
-        var overlapped = Physics2D.OverlapCircleAll(transform.position, 5, LayerMask.GetMask("UsedBlob"));
-        if (overlapped.Length > 1)
+        // chaque UsedBlob dans un radius de 3
+        var overlapped = Physics2D.OverlapCircleAll(transform.position, 3f, LayerMask.GetMask("UsedBlob"));
+        if (overlapped.Length >= 2)
         {
             GameObject UBlob = Instantiate(UsedBlob, transform.position, Quaternion.identity);
 
@@ -92,7 +91,7 @@ public class SC_DragAndDropGoo : MonoBehaviour
             {
                 // Ajout du spring joint pour chaque cible
                 var spring = UBlob.transform.gameObject.AddComponent<SpringJoint2D>();
-                spring.frequency = 9;
+                spring.frequency = 5;
                 spring.connectedBody = overlap.GetComponent<Rigidbody2D>();
                 spring.autoConfigureDistance = true;
                 //Tracing _Target = overlap.transform;

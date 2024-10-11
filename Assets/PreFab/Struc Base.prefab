@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 1306757082938348443}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.9256988, y: -2.4344473, z: 0.023419702}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -202,6 +202,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3974897944807531903, guid: bacded75a892a874c81b8f874f909167, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8001077380956773246}
+    - targetCorrespondingSourceObject: {fileID: 3974897944807531903, guid: bacded75a892a874c81b8f874f909167, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3915619623377385739}
   m_SourcePrefab: {fileID: 100100000, guid: bacded75a892a874c81b8f874f909167, type: 3}
 --- !u!1 &3389914038586720786 stripped
 GameObject:
@@ -227,6 +230,27 @@ SpringJoint2D:
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
   m_Distance: 2
+  m_DampingRatio: 0
+  m_Frequency: 1
+--- !u!231 &3915619623377385739
+SpringJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3389914038586720786}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 5553664272791196692}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_BreakAction: 3
+  m_AutoConfigureConnectedAnchor: 0
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 0, y: 0}
+  m_AutoConfigureDistance: 1
+  m_Distance: 2.828427
   m_DampingRatio: 0
   m_Frequency: 1
 --- !u!4 &3603768322117956832 stripped
