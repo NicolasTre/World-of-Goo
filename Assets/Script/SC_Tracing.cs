@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class SC_Tracing : MonoBehaviour
 {
@@ -17,7 +14,7 @@ public class SC_Tracing : MonoBehaviour
     {
         // chaque UsedBlob dans un radius de 2
         var overlapped = Physics2D.OverlapCircleAll(transform.position, 3f, LayerMask.GetMask("UsedBlob"));
-        if (overlapped.Length > 1)
+        if (overlapped.Length >= 2)
         {
             foreach (var overlap in overlapped)
             {

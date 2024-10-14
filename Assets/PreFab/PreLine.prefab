@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Target: {fileID: 0}
-  moveBlob: {fileID: 0}
+  moveBlob: {fileID: 4291029820906011979, guid: 08f83b5841ab0f24ebae8f42ebc7ec42, type: 3}
 --- !u!1 &3969202637112025563
 GameObject:
   m_ObjectHideFlags: 0

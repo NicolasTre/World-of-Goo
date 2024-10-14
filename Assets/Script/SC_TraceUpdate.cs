@@ -4,12 +4,13 @@ public class SC_TraceUpdate : MonoBehaviour
 {
     float dist;
     public Transform Target;
-    public SC_DragAndDropGoo moveBlob;
 
     // Update is called once per frame
     void Update()
     {
-        if (Vector2.Distance(Target.position, transform.position) > 3f)
+        var overlapped = Physics2D.OverlapCircleAll(transform.position, 3f, LayerMask.GetMask("UsedBlob"));
+
+        if (Vector2.Distance(Target.position, transform.position) > 3f && overlapped.Length <=1)
         {
             Destroy(gameObject);
         }

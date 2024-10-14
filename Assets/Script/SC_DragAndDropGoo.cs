@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
 
 
 public class SC_DragAndDropGoo : MonoBehaviour
@@ -20,15 +19,15 @@ public class SC_DragAndDropGoo : MonoBehaviour
 
     private void Update()
     {
-        if (IsGrabed)
+        if (IsGrabed) // creation of preline if a blob is grab and if you have a other usedblob a proxity
         {
-            // chaque UsedBlob dans un radius de 3
-            overlappedP = Physics2D.OverlapCircleAll(transform.position, 3f, LayerMask.GetMask("UsedBlob"));
+            
+            overlappedP = Physics2D.OverlapCircleAll(transform.position, 3f, LayerMask.GetMask("UsedBlob")); // check chaque UsedBlob dans un radius de 3
             if (overlappedP.Length >= 2)
             {
                 foreach (var overlap in overlappedP)
                 {
-                    if (!Connect.Contains(overlap.gameObject))
+                    if (!Connect.Contains(overlap.gameObject)) // check if u don't have already usedblob in the circle overlapped in the list   
                     {
                         Connect.Add(overlap.gameObject);
                         if (transform.childCount < overlappedP.Length && overlappedP.Length > 1)
@@ -55,6 +54,7 @@ public class SC_DragAndDropGoo : MonoBehaviour
     private void OnMouseDrag()
     {
         transform.position = MouseWorldPosition() + offset;
+        transform.GetComponent<CircleCollider2D>().isTrigger = true;
     }
 
     Vector3 MouseWorldPosition()
@@ -75,11 +75,12 @@ public class SC_DragAndDropGoo : MonoBehaviour
             {
                 Link();
                 transform.GetComponent<Rigidbody2D>().gravityScale = 1;
+                transform.GetComponent<CircleCollider2D>().isTrigger = false;
             }
         }
     }
 
-    private void Link()
+    private void Link() // creation of sping join
     {
         // chaque UsedBlob dans un radius de 3
         var overlapped = Physics2D.OverlapCircleAll(transform.position, 3f, LayerMask.GetMask("UsedBlob"));
@@ -97,7 +98,7 @@ public class SC_DragAndDropGoo : MonoBehaviour
                 //Tracing _Target = overlap.transform;
             }
 
-            Destroy(gameObject);
+            Destroy(gameObject); // destroy the last prefab of blob and preline
         }
 
     }

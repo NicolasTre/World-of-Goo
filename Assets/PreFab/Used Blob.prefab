@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2677741002191345106}
   - component: {fileID: 7434731946877025619}
   - component: {fileID: 8783580161219670773}
+  - component: {fileID: -7596424669191660090}
   m_Layer: 3
   m_Name: Used Blob
   m_TagString: UsedBlob
@@ -162,3 +163,15 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &-7596424669191660090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3974897944807531903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07d89ce43f0c62848b4d46510228db8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
