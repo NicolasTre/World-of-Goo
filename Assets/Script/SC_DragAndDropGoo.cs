@@ -92,7 +92,7 @@ public class SC_DragAndDropGoo : MonoBehaviour
             {
                 // Ajout du spring joint pour chaque cible
                 var spring = UBlob.transform.gameObject.AddComponent<SpringJoint2D>();
-                spring.frequency = 5;
+                spring.frequency = 7;
                 spring.connectedBody = overlap.GetComponent<Rigidbody2D>();
                 spring.autoConfigureDistance = true;
                 //Tracing _Target = overlap.transform;

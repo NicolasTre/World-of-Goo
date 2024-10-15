@@ -8,7 +8,7 @@ public class SC_AfterGrab : MonoBehaviour
     {
         if (context.performed || context.canceled)
         {
-            var Hit = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(Input.mousePosition), 5000, LayerMask.GetMask("Blob"));
+            var Hit = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(Input.mousePosition), 1000, LayerMask.GetMask("Blob"));
             if (Hit)
             {
                 Hit.collider.GetComponent<SC_DragAndDropGoo>().Interact();
