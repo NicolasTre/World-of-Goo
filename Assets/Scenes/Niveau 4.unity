@@ -815,6 +815,37 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6638188306127922672, guid: 08f83b5841ab0f24ebae8f42ebc7ec42, type: 3}
   m_PrefabInstance: {fileID: 2090989326}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &344623267
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 344623268}
+  m_Layer: 0
+  m_Name: BlobSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &344623268
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 344623267}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -13.86, y: -1.92, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1723084573}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &413615210
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1269,7 +1300,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.41960785, g: 0.6392157, b: 0.98039216, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -2045,6 +2076,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6638188306127922672, guid: 08f83b5841ab0f24ebae8f42ebc7ec42, type: 3}
   m_PrefabInstance: {fileID: 1330967733}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1723084573 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5035939994376401421, guid: 84259daaed72ef646a7d6ff9b9aa055d, type: 3}
+  m_PrefabInstance: {fileID: 1985399129}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1745892393
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2619,6 +2655,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -13.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3682263162324478797, guid: 84259daaed72ef646a7d6ff9b9aa055d, type: 3}
+      propertyPath: sceneName
+      value: Niveau 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3682263162324478797, guid: 84259daaed72ef646a7d6ff9b9aa055d, type: 3}
+      propertyPath: blobSpawnPoint
+      value: 
+      objectReference: {fileID: 344623267}
     - target: {fileID: 4374299798278591356, guid: 84259daaed72ef646a7d6ff9b9aa055d, type: 3}
       propertyPath: m_LocalScale.x
       value: 19.8237
@@ -2701,7 +2745,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 5035939994376401421, guid: 84259daaed72ef646a7d6ff9b9aa055d, type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 344623268}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84259daaed72ef646a7d6ff9b9aa055d, type: 3}
 --- !u!1001 &2029570239

@@ -593,6 +593,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4036961801818768426, guid: a7cf3ca034340614280ed67272aac4d1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -219
+      objectReference: {fileID: 0}
     - target: {fileID: 4800094496361257774, guid: a7cf3ca034340614280ed67272aac4d1, type: 3}
       propertyPath: m_Color.a
       value: 1
@@ -668,6 +672,10 @@ PrefabInstance:
     - target: {fileID: 6604814708936295715, guid: a7cf3ca034340614280ed67272aac4d1, type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7242595510262693387, guid: a7cf3ca034340614280ed67272aac4d1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 71
       objectReference: {fileID: 0}
     - target: {fileID: 7510547651518840601, guid: a7cf3ca034340614280ed67272aac4d1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -795,10 +803,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9175016936432317379, guid: a7cf3ca034340614280ed67272aac4d1, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 3273881293157322478, guid: a7cf3ca034340614280ed67272aac4d1, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7cf3ca034340614280ed67272aac4d1, type: 3}
@@ -879,9 +888,17 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 10099869}
+    - target: {fileID: 8849878943975994169, guid: bd915741c145e724a96c0f7ee9732148, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnLvl4Button
+      objectReference: {fileID: 0}
     - target: {fileID: 9197442481771087740, guid: bd915741c145e724a96c0f7ee9732148, type: 3}
       propertyPath: m_Name
       value: SelectLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 9197442481771087740, guid: bd915741c145e724a96c0f7ee9732148, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
