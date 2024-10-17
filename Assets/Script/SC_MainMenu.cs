@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -19,6 +17,11 @@ public class SC_MainMenu : MonoBehaviour
     public void OnLvl3Button()
     {
         SceneManager.LoadScene("Niveau 3");
+    }
+
+    public void OnLvl4Button()
+    {
+        SceneManager.LoadScene("Niveau 4");
     }
 
     public void OnYesButton()

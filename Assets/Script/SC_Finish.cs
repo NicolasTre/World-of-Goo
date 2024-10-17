@@ -3,13 +3,14 @@ using UnityEngine.SceneManagement;
 
 public class SC_Finish : MonoBehaviour
 {
-    [SerializeField] string sceneName;
 
+    [SerializeField] private GameObject canvasFinish;
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.tag == "UsedBlob")
         {
-            SceneManager.LoadScene(sceneName);
+            Time.timeScale = 0f;
+            canvasFinish.SetActive(true);
         }
     }
 }
