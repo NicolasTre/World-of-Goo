@@ -5,9 +5,13 @@ public class SC_ResetLevel : MonoBehaviour
 {
     [SerializeField] private string nameScene;
 
-
     public void OnResetButton()
     {
         SceneManager.LoadScene(nameScene);
+    }
+
+    public void OnMainMenuButton()
+    {
+        SceneManager.LoadScene("Main Menu");
     }
 }
